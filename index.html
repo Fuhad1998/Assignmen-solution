@@ -13,7 +13,118 @@
     />
   </head>
   <body>
-    <h1>hellow how are you.</h1>
+    <section class="container mt-5">
+      <div class="row">
+        <div class="col-md-6">
+          <img width="80%" src="images/mac.png" alt="" />
+        </div>
+        <div class="col-md-6">
+          <div class="mb-5">
+            <h1>Customize your Blue 24-inch iMac with Apple M1 chip.</h1>
+            <p>
+              Apple M1 chip with 8-core CPU with 4 perfomance cores and 4
+              efficiency cores, 7-core GPU, and 16-core Neural Engine 8GB
+              unified memory 256GB SSD storage Two Thunderbolt / USB 4 ports
+              Magic Mouse Magic keyboard Us English
+            </p>
+          </div>
+          <!-- memory button -->
+          <div class="mb-5">
+            <h6 class="fw-bolder">Memory</h6>
+            <button
+              onclick="updatePrice('8GB')"
+              class="btn btn-outline-dark text-left"
+            >
+              8GB unified memory
+            </button>
+            <button
+              onclick="updatePrice('16GB')"
+              class="btn btn-outline-dark text-left"
+            >
+              16GB unified memory
+            </button>
+          </div>
+          <!-- storage button -->
+          <div class="mb-5">
+            <h6 class="fw-bolder">Storage</h6>
+            <button
+              class="btn btn-outline-dark text-left"
+              onclick="updatePrice('256GB')"
+            >
+              256GB SSD storage
+            </button>
+            <button
+              class="btn btn-outline-dark text-left"
+              onclick="updatePrice('512GB')"
+            >
+              512GB SSD storage
+            </button>
+            <button
+              class="btn btn-outline-dark text-left"
+              onclick="updatePrice('1TB')"
+            >
+              1TB SSD storage
+            </button>
+          </div>
+          <!-- delivery button -->
+          <div class="mb-5">
+            <h6 class="fw-bolder">Choose your delivery option</h6>
+            <button
+              onclick="updatePrice('Friday,Aug 25')"
+              class="btn btn-outline-dark text-left"
+            >
+              Friday,Aug 25 FREE prime Delivery
+            </button>
+            <button
+              onclick="updatePrice('Friday,Aug 21')"
+              class="btn btn-outline-dark text-left"
+            >
+              Friday,Aug 21 Delivery charge $20
+            </button>
+          </div>
+          <!-- table area -->
+          <table class="table w-50">
+            <tbody>
+              <tr>
+                <td class="fw-bolder">Best Price</td>
+                <td class="fw-bolder">$1299</td>
+              </tr>
+              <tr>
+                <td class="fw-bolder">Extra Memory Cost</td>
+                <td class="fw-bolder">$<span id="memoty cost">0</span></td>
+              </tr>
+              <tr>
+                <td class="fw-bolder">Extra Storage Cost</td>
+                <td class="fw-bolder">$<span id="Storage Cost">0</span></td>
+              </tr>
+              <tr>
+                <td class="fw-bolder">Delivery charge</td>
+                <td class="fw-bolder">$<span id="Delivery charge">0</span></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td class="fw-bolder">Total Price</td>
+                <td class="fw-bolder">$<span id="total-cost">1299</span></td>
+              </tr>
+            </tfoot>
+          </table>
+          <!-- promo code area -->
+          <div class="w-50">
+            <h6>Add Pomo code</h6>
+            <div class="d-flex">
+              <input id="coupon-code" type="text" />
+              <button onclick="couponHendelar()" class="btn btn-danger">
+                Apply
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="text-center">
+        Total:$<span id="discount-total-price">1299</span>
+      </h1>
+    </section>
 
     <script src="js/script.js"></script>
   </body>
